@@ -95,9 +95,6 @@ def run_streamlit_app():
         """,
         unsafe_allow_html=True,
     )
-
-    width = int(st.experimental_get_query_params().get("width", [1600])[0])
-    height = int(st.experimental_get_query_params().get("height", [900])[0])
     # page_bg_img = """
     #         <style>
     #         body {
