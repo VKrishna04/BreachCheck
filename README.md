@@ -1,7 +1,3 @@
-# Repository Description
-
-BreachCheck is a tool designed to help users check if their email addresses or passwords have been involved in known data breaches. It leverages APIs from various breach databases to provide users with information about their potential exposure.
-
 # BreachCheck - Sagittarius
 
 ## Introduction
@@ -9,6 +5,8 @@ BreachCheck is a tool designed to help users check if their email addresses or p
 We strongly advise users to only utilize BreachCheck for their own emails and passwords. Do not misuse this tool or exploit it for malicious purposes. Respect the privacy and security of others by refraining from attempting to check passwords that do not belong to you.
 
 Our aim is to promote responsible and ethical use of BreachCheck to empower individuals in securing their online presence. By adhering to these principles, we can collectively contribute to a safer digital environment for everyone.
+
+You can experience the application [https://breachcheck-sagittarius.streamlit.app/](https://breachcheck-sagittarius.streamlit.app/) which is hosted on Streamlit Sharing Cloud.
 
 ## Usage
 
