@@ -16,10 +16,19 @@ import streamlit as st
 import os
 from streamlit_app import run_streamlit_app
 from cli_app import run_cli_app
+import argparse
 
 if __name__ == "__main__":
-    streamlit_server = os.getenv("STREAMLIT_SERVER")
-    if streamlit_server and "streamlit" in streamlit_server:
-        run_streamlit_app()
-    else:
+    parser = argparse.ArgumentParser(
+        description="Run the application in different modes"
+    )
+    parser.add_argument(
+        "--cli", action="store_true", help="Run the application in CLI mode"
+    )
+
+    args = parser.parse_args()
+
+    if args.cli:
         run_cli_app()
+    else:
+        run_streamlit_app()

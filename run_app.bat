@@ -1,5 +1,4 @@
 @echo off
-set STREAMLIT_SERVER=streamlit
 cd /d "%~dp0"
 
 echo Checking for required dependencies...
