@@ -17,6 +17,7 @@ import streamlit as st
 import os
 from streamlit_app import run_streamlit_app
 from cli_app import run_cli_app
+import argparse
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
