@@ -62,14 +62,14 @@ def show_faq_and_contributions():
         1. [@VKrishna04](https://github.com/VKrishna04)
 
         ### Frontend
-        1. [@harsha4678](https://github.com/harsha4678) - Figma Landing Page
-        2. [@longhxirguy](https://github.com/longhxirguy) - Streamlit Frontend
+        1. [@harsha4678](https://github.com/harsha4678) <- Figma Landing Page
+        2. [@longhxirguy](https://github.com/longhxirguy) <- Streamlit Frontend
 
         ### APIs Integration
-        1. [@Karthikkkk123](https://github.com/Karthikkkk123)
-        2. [APIs Integration Contributor 2](https://github.com/APIsIntegrationContributor2)
+        1. [@Karthikkkk123](https://github.com/Karthikkkk123) <- Streamlit
+        2. [Saisriram-88](https://github.com/Saisriram-88) <- CLI
 
         ### Support / Error Testing
-        1. [@Jayanth-0703](https://github.com/Jayanth-0703)
+        1. [@Jayanth-0703](https://github.com/Jayanth-0703) <- Support / Error Testing
         """
     )

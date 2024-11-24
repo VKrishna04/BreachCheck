@@ -26,6 +26,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Check if running on Streamlit Cloud using secrets
+is_cloud = st.secrets.get("IS_CLOUD", "false") == "true"
+
 
 def run_streamlit_app():
     st.set_page_config(
@@ -34,11 +37,20 @@ def run_streamlit_app():
         layout="centered",
     )
 
-    # Check if running on Streamlit Cloud
-    if os.getenv("STREAMLIT_SERVER_HEADLESS") == "true":
-        st.set_option("server.showForkButton", False)
+    current_year = datetime.datetime.now().year
 
-    # Function to stop the Streamlit server
+    if is_cloud:
+        st.markdown(
+            """
+            <style>
+                .viewerBadge_container__1QSob { display: none !important; }
+                .viewerBadge_link__1S137 { display: none !important; }
+            </style>
+        """,
+            unsafe_allow_html=True,
+        )
+
+    # Function to stop the Streamlit server running locally
     def stop_server():
         st.warning("Stopping the server...")
         st.markdown(
@@ -115,10 +127,10 @@ def run_streamlit_app():
             st.session_state.active_page = "Terms and Conditions"
         st.markdown("---")
         # Conditionally render the stop button to stop the server
-        if os.getenv("STREAMLIT_SERVER_HEADLESS") != "true":
+        if not is_cloud:
             if st.button("Stop Server"):
                 stop_server()
-        st.markdown("---")
+            st.markdown("---")
 
         # Unsplash API key input and filters
         # if "unsplash_access_key" not in st.session_state:
@@ -346,5 +358,5 @@ def run_streamlit_app():
 
     main()
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    run_streamlit_app()

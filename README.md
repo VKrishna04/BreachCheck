@@ -85,7 +85,7 @@ python app.py --cli
 
 ### APIs Integration
 1. [@Karthikkkk123](https://github.com/Karthikkkk123) <- Streamlit
-2. [Sriram](https://github.com/APIsIntegrationContributor2) <- CLI
+2. [@Saisriram-88](https://github.com/Saisriram-88) <- CLI
 
 ### Support / Error Testing
 1. [@Jayanth-0703](https://github.com/Jayanth-0703)
