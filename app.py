@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import argparse
 import streamlit as st
 import os
 from streamlit_app import run_streamlit_app

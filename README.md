@@ -71,7 +71,7 @@ Note: If you are using the batch file, make sure to run it in the root directory
 
 To run the CLI interface manually, use the following command:
 ```bash
-python cli.py
+python app.py --cli
 ```
 
 ## Contributors
@@ -85,7 +85,7 @@ python cli.py
 
 ### APIs Integration
 1. [@Karthikkkk123](https://github.com/Karthikkkk123) <- Streamlit
-2. [APIs Integration Contributor 2](https://github.com/APIsIntegrationContributor2) <- CLI
+2. [Sriram](https://github.com/APIsIntegrationContributor2) <- CLI
 
 ### Support / Error Testing
 1. [@Jayanth-0703](https://github.com/Jayanth-0703)
