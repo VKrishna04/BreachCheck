@@ -55,11 +55,12 @@ This is for installing the necessary packages to run the Streamlit application a
 ### Running the Application
 
 To run the Streamlit application there are two ways:
-1. Using the batch file, use the following command:
+1. You can visit this site [https://breachcheck-sagittarius.streamlit.app/](https://breachcheck-sagittarius.streamlit.app/) to use the Streamlit app which is hosted on Streamlit Sharing CLoud.
+2. Using the batch file, use the following command:
     ```bash
     .\run_app.bat
     ```
-2. Using the shortcut file named "Sagittarius" in the root directory of the project. It is the name of the team which made this project.
+3. Using the shortcut file named "Sagittarius" in the root directory of the project. It is the name of the team which made this project.
 
 Note: If you are using the batch file, make sure to run it in the root directory of the project.
 
