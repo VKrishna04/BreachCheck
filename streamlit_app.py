@@ -34,6 +34,10 @@ def run_streamlit_app():
         layout="centered",
     )
 
+    # Check if running on Streamlit Cloud
+    if os.getenv("STREAMLIT_SERVER_HEADLESS") == "true":
+        st.set_option("server.showForkButton", False)
+
     # Function to stop the Streamlit server
     def stop_server():
         st.warning("Stopping the server...")
@@ -103,6 +107,7 @@ def run_streamlit_app():
     #         </style>
     #         """
     # st.markdown(page_bg_img, unsafe_allow_html=True)
+
     # Sidebar navigation
     with st.sidebar:
         if st.button("Dashboard"):
@@ -112,9 +117,10 @@ def run_streamlit_app():
         if st.button("Terms and Conditions"):
             st.session_state.active_page = "Terms and Conditions"
         st.markdown("---")
-        # Button to stop the server
-        if st.button("Stop Server"):
-            stop_server()
+        # Conditionally render the stop button to stop the server
+        if os.getenv("STREAMLIT_SERVER_HEADLESS") != "true":
+            if st.button("Stop Server"):
+                stop_server()
         st.markdown("---")
 
         # Unsplash API key input and filters
@@ -332,7 +338,7 @@ def run_streamlit_app():
             </style>
             <footer class="footer">
                 <p>
-                    &copy; {current_year} |
+                    &copy;{current_year} |
                     <a href="https://github.com/VKrishna04/BreachCheck" target="_blank">GitHub</a> |
                     <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>
                 </p>
