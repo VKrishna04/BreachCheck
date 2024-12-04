@@ -20,7 +20,7 @@ def show_terms_and_conditions():
     st.markdown(
         """
     ## No Data Storage
-    We declare that no data is being stored by us as no database is connected to this application. All interactions and data processing occur locally on your device.
+    We declare that no data is being stored by us as no database is connected to this application. All interactions and data processing occur locally on your device / on cloud when hosted.
 
     ## Disclaimer of Liability
     We are not responsible for any issues, damages, or losses caused by the usage of this application. The application is provided "as is" without any warranties or guarantees of any kind.

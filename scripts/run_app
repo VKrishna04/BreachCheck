@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Copyright 2025 @VKrishna04
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,22 +14,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import argparse
-import os
-from Interfaces.streamlit_app import run_streamlit_app
-from Interfaces.cli_app import run_cli_app
+cd "$(dirname "$0")/.."
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Run the application in different modes"
-    )
-    parser.add_argument(
-        "--cli", action="store_true", help="Run the application in CLI mode"
-    )
-
-    args = parser.parse_args()
-
-    if args.cli:
-        run_cli_app()
-    else:
-        run_streamlit_app()
+# Detect the operating system and run the corresponding script
+if [ "$(uname)" = "Linux" ]; then
+    echo "Detected Linux OS"
+    ./scripts/run_app.sh
+elif [ "$(uname)" = "Darwin" ]; then
+    echo "Detected macOS"
+    ./scripts/run_app.sh
+elif [ "$(uname -o)" = "Msys" ]; then
+    echo "Detected Windows OS"
+    ./scripts/run_app.bat
+else
+    echo "Unsupported OS"
+    exit 1
+fi

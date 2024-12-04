@@ -12,22 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import argparse
-import os
-from Interfaces.streamlit_app import run_streamlit_app
-from Interfaces.cli_app import run_cli_app
+Set-Location -Path (Join-Path -Path $PSScriptRoot -ChildPath "..")
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Run the application in different modes"
-    )
-    parser.add_argument(
-        "--cli", action="store_true", help="Run the application in CLI mode"
-    )
+Write-Output "Checking for required dependencies..."
+pip install -r requirements.txt | Select-String -Pattern "Requirement already satisfied" -NotMatch
 
-    args = parser.parse_args()
+Write-Output "Starting Streamlit app..."
+streamlit run app.py
 
-    if args.cli:
-        run_cli_app()
-    else:
-        run_streamlit_app()
+Write-Output ""

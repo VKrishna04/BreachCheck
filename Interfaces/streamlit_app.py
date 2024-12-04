@@ -1,13 +1,26 @@
+# Copyright 2025 @VKrishna04
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import re
-import requests
 import datetime
 import os
 import signal
 import streamlit as st
-from BreachCheck.api.email_apis import *
-from BreachCheck.api.password_apis import check_pwned_password, check_multiple_passwords
-from BreachCheck.docs.terms_and_conditions import show_terms_and_conditions
-from BreachCheck.docs.faq_and_contributions import show_faq_and_contributions
+from api.email_apis import *
+from api.password_apis import check_pwned_password, check_multiple_passwords
+from docs.terms_and_conditions import show_terms_and_conditions
+from docs.faq_and_contributions import show_faq_and_contributions
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,9 +34,13 @@ def run_streamlit_app():
         page_title="Sagittarius",  # Set page title
         page_icon="🔒",  # Favicon emoji
         layout="centered",
+        initial_sidebar_state="expanded",
+        menu_items={
+            "Get Help": "https://github.com/VKrishna04/BreachCheck/issues",
+            "Report a bug": "https://github.com/VKrishna04/BreachCheck/issues",
+            "About": "https://github.com/VKrishna04",
+        },
     )
-
-    current_year = datetime.datetime.now().year
 
     if is_cloud:
         st.markdown(

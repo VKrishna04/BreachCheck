@@ -8,6 +8,37 @@ Our aim is to promote responsible and ethical use of BreachCheck to empower indi
 
 You can experience the application [https://breachcheck-sagittarius.streamlit.app/](https://breachcheck-sagittarius.streamlit.app/) which is hosted on Streamlit Sharing Cloud.
 
+## Project Structure
+
+```yaml
+BreachCheck/
+│
+├── Interfaces/
+│   └── streamlit_app.py  # Main Streamlit application interface
+│
+├── api/
+│   └── breach_api.py  # API integration for breach checks
+│
+├── scripts/
+│   ├── run_app  # Extensionless script to detect OS and run the appropriate script
+│   ├── run_app.sh  # Shell script for Unix-based systems
+│   ├── run_app.bat  # Batch script for Windows
+│   └── run_app.ps1  # PowerShell script for Windows
+│
+├── docs/
+│   ├── faq_and_contributions.py  # Frequently Asked Questions and Contributions
+│   └── terms.md  # Terms and Conditions
+│
+├── README.md  # Project documentation
+├── conf.json  # Configuration file for API keys and settings
+├── requirements.txt  # Python dependencies
+├── app.py  # Entry point to run the Streamlit application
+└── app_complete.py  # Entry point to run the Complete Streamlit application in a single file.
+```
+
+Note: This `app_complete.py` file is not used in the project and is a little behind the main `app.py` file. For Contributions, please refer to the `app.py` file.
+
+
 ## Usage
 
 ### Prerequisites
@@ -52,17 +83,18 @@ This is for installing the necessary packages to run the Streamlit application a
 
 ### Running the Application
 
-To run the Streamlit application there are two ways:
-1. You can visit this site [https://breachcheck-sagittarius.streamlit.app/](https://breachcheck-sagittarius.streamlit.app/) to use the Streamlit app which is hosted on Streamlit Sharing CLoud.
+To run the Streamlit application there are three ways:
+1. You can visit this site [https://breachcheck-sagittarius.streamlit.app/](https://breachcheck-sagittarius.streamlit.app/) to use the Streamlit app which is hosted on Streamlit Sharing Cloud.
+
 2. Using the batch file, use the following command:
     ```bash
     .\run_app.bat
     ```
 3. Using the shortcut file named "Sagittarius" in the root directory of the project. It is the name of the team which made this project.
 
-Note: If you are using the batch file, make sure to run it in the root directory of the project.
+Note: If you are using the batch file, make sure to run it from the root directory of the project.
 
-3. Don't run the Streamlit app manually, it will not work as expected since it requires the environment variables to be set.
+3. Don't run the Streamlit app python file manually, it will not work as expected since it is set to open CLI.
 
 4. To modify the user theme of the Streamlit app, you can change the necessary variables [here](.streamlit/config.toml). The theme is set to "dark" by default.
 
@@ -71,6 +103,21 @@ Note: If you are using the batch file, make sure to run it in the root directory
 To run the CLI interface manually, use the following command:
 ```bash
 python app.py --cli
+```
+
+### Complete App in single file
+
+Below is the complete code for the application which is running directly without any support files:
+
+To run this code as a normal Python file to use CLI, use the following command:
+
+```bash
+python app_complete.py --cli
+```
+
+To run this code as a Streamlit app, use the following command:
+```bash
+streamlit run app_complete.py
 ```
 
 ## Contributors
@@ -83,7 +130,7 @@ python app.py --cli
 2. [@longhxirguy](https://github.com/longhxirguy) <- Streamlit Frontend
 
 ### APIs Integration
-1. [@Karthikkkk123](https://github.com/Karthikkkk123) <- Streamlit
+1. [@Karthikkkk123](https://github.com/Karthikkkk123) <- Streamlit Interface
 2. [@Saisriram-88](https://github.com/Saisriram-88) <- CLI
 
 ### Support / Error Testing
