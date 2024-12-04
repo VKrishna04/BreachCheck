@@ -1,5 +1,5 @@
 # BreachCheck - Sagittarius
-
+<img src="https://socialify.git.ci/VKrishna04/BreachCheck/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto" alt="BreachCheck" width="640" height="320" style="align-items: center" />
 ## Introduction
 
 We strongly advise users to only utilize BreachCheck for their own emails and passwords. Do not misuse this tool or exploit it for malicious purposes. Respect the privacy and security of others by refraining from attempting to check passwords that do not belong to you.
